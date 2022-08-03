@@ -1,0 +1,24 @@
+<%= form_with model: product do |f| %>
+  <% if product.errors.any? %>
+    <% product.errors.full_messages.each do |error| %>
+      <%= error %>
+    <% end %>
+  <% end %>
+
+  <div class="flex flex-col mb-2">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "w-full md:w-1/2 rounded", placeholder: "Nintendo Switch..." %>
+  </div>
+
+  <div class="flex flex-col mb-2">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "w-full md:w-1/2 rounded", placeholder: "New and sealed product..." %>
+  </div>
+
+  <div class="flex flex-col mb-2">
+    <%= f.label :price %>
+    <%= f.number_field :price, class: "w-full md:w-1/2 rounded", placeholder: "$100" %>
+  </div>
+
+  <%= f.submit class: "bg-blue-500 p-2 rounded text-white cursor-pointer" %>
+<% end %>

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+ps4:
+  title: PS4 Fat
+  description: PS4 2010
+  price: 150
+
+switch:
+  title: Nintendo Switch
+  description: Nintendo Switch v2
+  price: 100

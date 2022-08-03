@@ -1,5 +1,6 @@
 <h1 class="text-4xl">Product:</h1>
 
+<%= image_tag @product.photo, width: "100px", height: "100px" if @product.photo.attached? %>
 <h2 class="text-2xl bold title"><%= @product.title %></h2>
 <p class="price">$<%= @product.price %></p>
 <p class="description"><%= @product.description %></p>

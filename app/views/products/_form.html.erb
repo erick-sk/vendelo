@@ -20,5 +20,10 @@
     <%= f.number_field :price, class: "w-full md:w-1/2 rounded", placeholder: "$100" %>
   </div>
 
+  <div class="flex flex-col mb-3">
+    <%= f.label :photo %>
+    <%= f.file_field :photo, class: "bg-blue-200 p-2 rounded w-full md:w-1/2 rounded" %>
+  </div>
+
   <%= f.submit class: "bg-blue-500 p-2 rounded text-white cursor-pointer" %>
 <% end %>

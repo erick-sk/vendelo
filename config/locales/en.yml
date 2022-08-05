@@ -52,7 +52,7 @@ en:
     confirm: "Are you sure?"
   products:
     index:
-      title: "Products"
+      title: "All products"
     edit:
       title: "Edit product"
     new:

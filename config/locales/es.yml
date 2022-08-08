@@ -28,3 +28,25 @@ es:
       updated: "El producto se acutalizó correctamente."
     destroy:
       destroyed: "El producto se eliminó correctamente."
+  categories:
+    category:
+      name: "Nombre"
+      edit: "Editar"
+      delete: "Eliminar"
+    index:
+      title: "Categorias"
+      new: "Añdir categoria"
+    edit:
+      title: "Editar categoria"
+      back: "Regresar a categorias"
+    new:
+      title: "Nueva categoria"
+      back: "Regresar a categorias"
+    create:
+      created: "La categoría fue creada."
+    update:
+      updated:
+        "La categoría fue actualizada."
+    destroy:
+      destroyed:
+        "La categoría fue eliminada."

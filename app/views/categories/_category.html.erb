@@ -1,0 +1,10 @@
+<div id="<%= dom_id category %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1"><%= t('.name') %>:</strong>
+    <%= category.Name %>
+  </p>
+
+    <%= link_to t('.edit'), edit_category_path(category), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to t('.delete'), category_path(category), data: { turbo_method: :delete, turbo_confirm: t('common.confirm') },class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-3">
+</div>

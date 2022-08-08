@@ -1,4 +1,4 @@
-<div class="bg-white rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700 transition hover:scale-105">
+<div class="product bg-white rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700 transition hover:scale-105">
   <%= link_to product_path(product.id) do %>
     <%= image_tag product.photo, class: "p-8 rounded-t-lg" if product.photo.attached? %>
   <% end %>

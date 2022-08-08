@@ -53,6 +53,7 @@ en:
   products:
     index:
       title: "All products"
+      all: "All"
     edit:
       title: "Edit product"
     new:

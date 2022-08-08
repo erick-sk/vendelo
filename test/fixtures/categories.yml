@@ -1,7 +1,10 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  Name: MyString
+games:
+  name: Video games
 
-two:
-  Name: MyString
+informatics:
+  name: Informatics
+
+clothes:
+  name: Clothes

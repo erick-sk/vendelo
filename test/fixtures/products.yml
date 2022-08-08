@@ -3,9 +3,17 @@
 ps4:
   title: PS4 Fat
   description: PS4 2010
+  category: games
   price: 150
 
 switch:
   title: Nintendo Switch
   description: Nintendo Switch v2
+  category: informatics
   price: 100
+
+macbook:
+  title: Macbook Air
+  description: New product
+  category: informatics
+  price: 1000

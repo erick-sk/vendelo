@@ -5,7 +5,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path
 
     assert_response :success
-    assert_select '.product', 2
+    assert_select '.product', 3
   end
 
   test 'render a detail product page' do
@@ -27,7 +27,8 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   test 'allow to create a new product' do
     post products_path, params: {
       product: {
-        title: 'Nintendo 64',
+        title: 'Nintengo 64',
+        category_id: categories(:games).id,
         description: 'No cables',
         price: 45
       }

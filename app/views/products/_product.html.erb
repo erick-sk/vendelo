@@ -1,15 +1,15 @@
 <div class="product bg-white rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700 transition hover:scale-105">
-  <%= link_to product_path(product.id) do %>
+  <%= link_to product_path(product.id), 'data-turbo-frame': '_top' do %>
     <%= image_tag product.photo, class: "p-8 rounded-t-lg" if product.photo.attached? %>
   <% end %>
   <div class="px-5 pb-5">
-    <%= link_to product_path(product.id) do %>
+    <%= link_to product_path(product.id), 'data-turbo-frame': '_top' do %>
       <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"><%= product.title %></h5>
     <% end %>
 
     <div class="flex justify-between items-center">
       <span class="text-2xl font-bold text-gray-900 dark:text-white">$<%= product.price %></span>
-      <%= link_to "See more", product_path(product.id), class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" %>
+      <%= link_to "See more", product_path(product.id), 'data-turbo-frame': '_top', class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" %>
     </div>
   </div>
 </div>

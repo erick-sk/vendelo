@@ -1,10 +1,12 @@
-<h1 class="text-4xl my-4"><%= t('.title') %></h1>
+<%= turbo_frame_tag "categories" do %>
+  <h1 class="text-4xl my-4"><%= t('.title') %></h1>
 
-<div class="flex mb-4">
-  <%= link_to t('.all') ,products_path, class: "mr-2 underline" %>
-  <%= render partial: "category", collection: @categories %>
-</div>
+  <div class="flex mb-4">
+    <%= link_to t('.all') ,products_path, class: "mr-2 underline" %>
+    <%= render partial: "category", collection: @categories %>
+  </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-  <%= render partial: "product", collection: @products %>
-</div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+    <%= render partial: "product", collection: @products %>
+  </div>
+<% end %>

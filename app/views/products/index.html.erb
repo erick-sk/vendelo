@@ -6,6 +6,13 @@
     <%= render partial: "category", collection: @categories %>
   </div>
 
+  <div class="flex mb-4">
+    <%= form_with url: products_path, method: :get do |f| %>
+      <%= f.number_field :min_price, placeholder: t('.min_price'), onChange: "this.form.requestSubmit()", value: params[:min_price] %>
+      <%= f.number_field :max_price, placeholder: t('.max_price'), onChange: "this.form.requestSubmit()", value: params[:max_price] %>
+    <% end %>
+  </div>
+
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
     <%= render partial: "product", collection: @products %>
   </div>

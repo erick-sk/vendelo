@@ -54,6 +54,8 @@ en:
     index:
       title: "All products"
       all: "All"
+      min_price: "Min price"
+      max_price: "Max price"
     edit:
       title: "Edit product"
     new:

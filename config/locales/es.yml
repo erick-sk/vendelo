@@ -19,6 +19,8 @@ es:
     index:
       title: "Productos"
       all: "Todos"
+      min_prince: "Min precio"
+      max_prince: "Max precio"
     edit:
       title: "Editar producto"
     new:

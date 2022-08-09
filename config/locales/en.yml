@@ -54,6 +54,7 @@ en:
     index:
       title: "All products"
       all: "All"
+      query_text: "ps4, nintendo..."
       min_price: "Min price"
       max_price: "Max price"
     edit:

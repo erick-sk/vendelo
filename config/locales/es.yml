@@ -19,8 +19,9 @@ es:
     index:
       title: "Productos"
       all: "Todos"
-      min_prince: "Min precio"
-      max_prince: "Max precio"
+      query_text: "ps4, nintendo..."
+      min_price: "Min precio"
+      max_price: "Max precio"
     edit:
       title: "Editar producto"
     new:

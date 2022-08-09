@@ -8,6 +8,7 @@
 
   <div class="flex mb-4">
     <%= form_with url: products_path, method: :get do |f| %>
+      <%= f.text_field :query_text, placeholder: t('.query_text'), onChange: "this.form.requestSubmit()", value: params[:query_text] %>
       <%= f.number_field :min_price, placeholder: t('.min_price'), onChange: "this.form.requestSubmit()", value: params[:min_price] %>
       <%= f.number_field :max_price, placeholder: t('.max_price'), onChange: "this.form.requestSubmit()", value: params[:max_price] %>
     <% end %>

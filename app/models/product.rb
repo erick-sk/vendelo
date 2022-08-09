@@ -6,6 +6,13 @@ class Product < ApplicationRecord
     description: 'B',
   }
 
+  # Variables
+  ORDER_BY = {
+    newest: "created_at DESC",
+    expensive: "price DESC",
+    cheapest: "price ASC"
+  }
+
   # Active storage
   has_one_attached :photo
 

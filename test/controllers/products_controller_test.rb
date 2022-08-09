@@ -32,6 +32,30 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_select 'div'
   end
 
+  test 'render a list of products filtered by most expensive' do
+    get products_path(order_by: 'expensive')
+
+    assert_response :success
+    assert_select '.product', 3
+    assert_select '.product .product-details .title', 'Macbook Air'
+  end
+
+  test 'render a list of products filtered by most cheapest' do
+    get products_path(order_by: 'cheapest')
+
+    assert_response :success
+    assert_select '.product', 3
+    assert_select '.product .product-details .title', 'Nintendo Switch'
+  end
+
+  test 'render a list of products filtered by most newest' do
+    get products_path(order_by: 'newest')
+
+    assert_response :success
+    assert_select '.product', 3
+    assert_select '.product .product-details .title', 'PS4 Fat'
+  end
+
   test 'render a detail product page' do
     get product_path(products(:ps4))
 

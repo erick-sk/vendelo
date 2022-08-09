@@ -57,6 +57,9 @@ en:
       query_text: "ps4, nintendo..."
       min_price: "Min price"
       max_price: "Max price"
+      expensive: "Expensive"
+      newest: "Newest"
+      cheapest: "Chepeast"
     edit:
       title: "Edit product"
     new:

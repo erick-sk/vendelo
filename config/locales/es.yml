@@ -1,4 +1,6 @@
 es:
+  app_name: "Vendelo"
+  meta_title: "Compra y Vende de todo"
   activerecord:
     models:
       product: "Todos los productos"

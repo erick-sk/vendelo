@@ -20,7 +20,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path(min_price: 100, max_price: 1000)
 
     assert_response :success
-    assert_select '.product', 12
+    assert_select '.product', 3
     assert_select 'div'
   end
 

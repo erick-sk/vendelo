@@ -5,22 +5,22 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path
 
     assert_response :success
-    assert_select '.product', 3
-    assert_select '.category', 3
+    assert_select '.product', 12
+    assert_select '.category', 9
   end
 
   test 'render a list of products filtered by category' do
-    get products_path(category_id: categories(:games).id)
+    get products_path(category_id: categories(:videogames).id)
 
     assert_response :success
-    assert_select '.product', 1
+    assert_select '.product', 7
   end
 
   test 'render a list of products filtered by min price and max price' do
     get products_path(min_price: 100, max_price: 1000)
 
     assert_response :success
-    assert_select '.product', 3
+    assert_select '.product', 12
     assert_select 'div'
   end
 
@@ -36,7 +36,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path(order_by: 'expensive')
 
     assert_response :success
-    assert_select '.product', 3
+    assert_select '.product', 12
     assert_select '.product .product-details .title', 'Macbook Air'
   end
 
@@ -44,15 +44,15 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path(order_by: 'cheapest')
 
     assert_response :success
-    assert_select '.product', 3
-    assert_select '.product .product-details .title', 'Nintendo Switch'
+    assert_select '.product', 12
+    assert_select '.product .product-details .title', 'El hobbit'
   end
 
   test 'render a list of products filtered by most newest' do
     get products_path(order_by: 'newest')
 
     assert_response :success
-    assert_select '.product', 3
+    assert_select '.product', 12
     assert_select '.product .product-details .title', 'PS4 Fat'
   end
 
@@ -62,7 +62,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select '.title', 'PS4 Fat'
     assert_select '.price', '$150'
-    assert_select '.description', 'PS4 2010'
+    assert_select '.description', 'PS4 en buen estado'
   end
 
   test 'render a new product form' do
@@ -76,7 +76,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     post products_path, params: {
       product: {
         title: 'Nintengo 64',
-        category_id: categories(:games).id,
+        category_id: categories(:videogames).id,
         description: 'No cables',
         price: 45
       }

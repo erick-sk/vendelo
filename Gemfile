@@ -36,6 +36,9 @@ gem "redis", "~> 4.0"
 # PG search
 gem "pg_search", "~> 2.3"
 
+# Pagy
+gem "pagy", "~> 5.10"
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -76,3 +79,4 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+

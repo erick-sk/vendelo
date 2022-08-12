@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class Authentication::SessionsControllerTest < ActionDispatch::IntegrationTest
-  setup do
+  def setup
     @user = users(:erick)
   end
 
@@ -21,5 +21,14 @@ class Authentication::SessionsControllerTest < ActionDispatch::IntegrationTest
     post sessions_url, params: { login: @user.username, password: "123456"}
 
     assert_redirected_to products_url
+  end
+
+  test 'should logout' do
+    login
+
+    delete session_url(@user.id)
+
+    assert_redirected_to products_url
+    assert_equal flash[:alert], "Successfully Logout"
   end
 end

@@ -23,4 +23,5 @@ class Product < ApplicationRecord
 
   # Associations
   belongs_to :category
+  belongs_to :user, default: -> { Current.user }
 end

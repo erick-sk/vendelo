@@ -14,4 +14,10 @@ class Authentication::SessionsController < ApplicationController
       redirect_to new_session_path, status: :unprocessable_entity, alert: t('.no_login')
     end
   end
+
+  def destroy
+    session.delete(:user_id)
+
+    redirect_to products_path, alert: t('.destroyed')
+  end
 end

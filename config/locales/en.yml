@@ -34,25 +34,30 @@ en:
   meta_title: "Buy and Sell everything"
   activerecord:
     models:
-      product: Product
+      product: "Product"
+      user: "User"
+      category: "Category"
     attributes:
       product:
         title: "Title"
         description: "Description"
         price: "Price"
-    errors:
-      models:
-        product:
-          attributes:
-            title:
-              blank: "can't be blank"
-            descriptio:
-              blank: "can't be blank"
-            price:
-              blank: "can't be blank"
+      user:
+        email: "Email"
+        username: "Username"
+        password: "Password"
+      category:
+        name: "Name"
   common:
     confirm: "Are you sure?"
     not_logged_in: "You have to login or create an account."
+  shared:
+    header:
+      add_product: "Add product"
+      add_category: "Add category"
+      login: "Login"
+      register: "Register"
+      logout: "Logout"
   authentication:
     users:
       create:
@@ -62,6 +67,8 @@ en:
       create:
         login: "Welcome!"
         no_login: "Login invalid!"
+      destroy:
+        destroyed: "Successfully Logout"
   products:
     index:
       title: "All products"

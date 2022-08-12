@@ -16,6 +16,9 @@ class User < ApplicationRecord
             }
   validates :password, length: { minimum: 6 }
 
+  # Associations
+  has_many :products, dependent: :destroy
+
   # Callbacks
   before_save :downcase_attributes
 

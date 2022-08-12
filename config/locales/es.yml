@@ -22,6 +22,10 @@ es:
       create:
         created: "Tu cuenta ha sido creada!"
         alert_created: "Hubo un error, intentalo otra vez"
+    sessions:
+      create:
+        login: "¡Bienvenido!"
+        no_login: "¡Login invalido!"
   products:
     index:
       title: "Productos"

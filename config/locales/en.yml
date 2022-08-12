@@ -57,6 +57,10 @@ en:
       create:
         created: "Your account has been created!"
         alert_created: "There was an error, try again!"
+    sessions:
+      create:
+        login: "Welcome!"
+        no_login: "Login invalid!"
   products:
     index:
       title: "All products"

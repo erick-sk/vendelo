@@ -17,6 +17,7 @@ es:
             price: "No puede estar vacío"
   common:
     confirm: "¿Estás seguro?"
+    not_logged_in: "Aún no has iniciado sesión o creado una cuenta."
   authentication:
     users:
       create:

@@ -1,6 +1,6 @@
 <%= form_with(url: sessions_path) do |form| %>
   <div class="flex flex-col mb-2">
-    <%= form.label :login %>
+    <%= form.label :login, "Username or Email" %>
     <%= form.text_field :login, class: "w-full md:w-1/2 rounded" %>
   </div>
 

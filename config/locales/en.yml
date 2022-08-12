@@ -52,6 +52,7 @@ en:
               blank: "can't be blank"
   common:
     confirm: "Are you sure?"
+    not_logged_in: "You have to login or create an account."
   authentication:
     users:
       create:

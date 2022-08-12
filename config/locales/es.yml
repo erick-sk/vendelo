@@ -17,6 +17,11 @@ es:
             price: "No puede estar vacío"
   common:
     confirm: "¿Estás seguro?"
+  authentication:
+    users:
+      create:
+        created: "Tu cuenta ha sido creada!"
+        alert_created: "Hubo un error, intentalo otra vez"
   products:
     index:
       title: "Productos"

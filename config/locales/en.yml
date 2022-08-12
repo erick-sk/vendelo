@@ -52,6 +52,11 @@ en:
               blank: "can't be blank"
   common:
     confirm: "Are you sure?"
+  authentication:
+    users:
+      create:
+        created: "Your account has been created!"
+        alert_created: "There was an error, try again!"
   products:
     index:
       title: "All products"

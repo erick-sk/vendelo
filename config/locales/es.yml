@@ -20,6 +20,7 @@ es:
   common:
     confirm: "¿Estás seguro?"
     not_logged_in: "Aún no has iniciado sesión o creado una cuenta."
+    not_authorized: "No tienes permiso para esta acción."
   shared:
     header:
       add_product: "Añadir producto"

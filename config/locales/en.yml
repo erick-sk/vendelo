@@ -51,6 +51,7 @@ en:
   common:
     confirm: "Are you sure?"
     not_logged_in: "You have to login or create an account."
+    not_authorized: "You don't have permission for this action."
   shared:
     header:
       add_product: "Add product"

@@ -5,15 +5,18 @@ erick:
   username: erick
   password_digest:
     <%= BCrypt::Password.create('123456', cost: 5) %>
+  admin: true
 
 valeria:
   email: valeria@mail.com
   username: valuu
   password_digest:
     <%= BCrypt::Password.create('123456', cost: 5) %>
+  admin: false
 
 pelusa:
   email: pelusa@mail.com
   username: pelusa
   password_digest:
     <%= BCrypt::Password.create('123456', cost: 5) %>
+  admin: false

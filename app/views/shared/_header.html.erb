@@ -5,5 +5,6 @@
   <%= link_to t('.add_category'), new_category_path, class: "underline mr-2" if Current.user&.admin? %>
   <%= link_to t('.login'), new_session_path, class: "underline mr-2" unless Current.user %>
   <%= link_to t('.register'), new_user_path, class: "underline mr-2" unless Current.user %>
-  <%= link_to t('.logout'), session_path(Current.user.id), data: { turbo_method: :delete, turbo_confirm: t('common.confirm') }, class: "underline" if Current.user %>
+  <%= link_to t('.logout'), session_path(Current.user.id), data: { turbo_method: :delete, turbo_confirm: t('common.confirm') }, class: "underline mr-2" if Current.user %>
+  <p><%= Current.user&.username %></p>
 </div>

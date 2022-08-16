@@ -52,6 +52,7 @@ en:
     confirm: "Are you sure?"
     not_logged_in: "You have to login or create an account."
     not_authorized: "You don't have permission for this action."
+    error_user_not_found: "Not found!"
   shared:
     header:
       add_product: "Add product"
@@ -80,6 +81,10 @@ en:
       expensive: "Expensive"
       newest: "Newest"
       cheapest: "Chepeast"
+    show:
+      edit: "Edit product"
+      delete: "Delete product"
+      view_more: "View more products of %{username}"
     edit:
       title: "Edit product"
     new:
@@ -107,8 +112,6 @@ en:
     create:
       created: "Category was successfully created."
     update:
-      updated:
-        "Category was successfully updated."
+      updated: "Category was successfully updated."
     destroy:
-      destroyed:
-        "Category was successfully destroyed."
+      destroyed: "Category was successfully destroyed."

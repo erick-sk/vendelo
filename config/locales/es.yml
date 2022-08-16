@@ -21,6 +21,7 @@ es:
     confirm: "¿Estás seguro?"
     not_logged_in: "Aún no has iniciado sesión o creado una cuenta."
     not_authorized: "No tienes permiso para esta acción."
+    error_user_not_found: "¡No se ha encontrado!"
   shared:
     header:
       add_product: "Añadir producto"
@@ -49,6 +50,10 @@ es:
       expensive: "Más caro"
       newest: "Más reciente"
       cheapest: "Más barato"
+    show:
+      edit: "Editar product"
+      delete: "Eliminar product"
+      view_more: "View more products by %{username}"
     edit:
       title: "Editar producto"
     new:
@@ -76,8 +81,6 @@ es:
     create:
       created: "La categoría fue creada."
     update:
-      updated:
-        "La categoría fue actualizada."
+      updated: "La categoría fue actualizada."
     destroy:
-      destroyed:
-        "La categoría fue eliminada."
+      destroyed: "La categoría fue eliminada."

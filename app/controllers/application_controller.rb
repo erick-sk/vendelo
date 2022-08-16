@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
   include Authorization
   include Language
   include Pagy::Backend
-
-  # Callbacks
+  include Error
 
 end

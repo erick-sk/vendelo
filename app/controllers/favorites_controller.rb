@@ -4,6 +4,11 @@ class FavoritesController < ApplicationController
     redirect_to product_path(set_product)
   end
 
+  def destroy
+    set_product.favorites.find_by(user: Current.user).destroy
+    redirect_to product_path(set_product), status: :see_other
+  end
+
   private
 
   def set_product

@@ -1,6 +1,10 @@
 class Product < ApplicationRecord
   # PG search
   include PgSearch::Model
+
+  # Favorites
+  include Favoritable
+
   pg_search_scope :search_full_text, against: {
     title: 'A',
     description: 'B',
@@ -22,7 +26,6 @@ class Product < ApplicationRecord
   validates :price, presence: true
 
   # Associations
-  has_many :favorites, dependent: :destroy
   belongs_to :category
   belongs_to :user, default: -> { Current.user }
 

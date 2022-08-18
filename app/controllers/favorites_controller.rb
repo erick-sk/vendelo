@@ -1,11 +1,11 @@
 class FavoritesController < ApplicationController
   def create
-    Favorite.create(product: set_product, user: Current.user)
+    set_product.favorite!
     redirect_to product_path(set_product)
   end
 
   def destroy
-    set_product.favorites.find_by(user: Current.user).destroy
+    set_product.unfavorite!
     redirect_to product_path(set_product), status: :see_other
   end
 

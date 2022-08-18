@@ -22,6 +22,7 @@ class Product < ApplicationRecord
   validates :price, presence: true
 
   # Associations
+  has_many :favorites, dependent: :destroy
   belongs_to :category
   belongs_to :user, default: -> { Current.user }
 

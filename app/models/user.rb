@@ -18,6 +18,7 @@ class User < ApplicationRecord
 
   # Associations
   has_many :products, dependent: :destroy
+  has_many :favorites, dependent: :destroy
 
   # Callbacks
   before_save :downcase_attributes

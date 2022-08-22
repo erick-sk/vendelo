@@ -15,10 +15,12 @@
     <% end %>
   </div>
 
-  <%= turbo_frame_tag "products-#{@pagy.page}" do %>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-      <%= render partial: "product", collection: @products %>
-    </div>
-    <%= turbo_frame_tag "products-#{@pagy.next}", src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
+  <%= turbo_frame_tag :products do %>
+    <%= turbo_frame_tag "products-#{@pagy.page}" do %>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+        <%= render partial: "product", collection: @products %>
+      </div>
+      <%= turbo_frame_tag "products-#{@pagy.next}", src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
+    <% end %>
   <% end %>
 <% end %>

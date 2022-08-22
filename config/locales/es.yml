@@ -29,6 +29,7 @@ es:
       login: "Iniciar sesión"
       register: "Registro"
       logout: "Cerrar sesión"
+      my_favorites: "Mis favoritos"
   authentication:
     users:
       create:

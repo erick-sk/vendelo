@@ -7,6 +7,12 @@ class FavoritesControllerTest < ActionDispatch::IntegrationTest
     @ps5 = products(:ps5)
   end
 
+  test 'should return favorites' do
+    get favorites_url
+
+    assert_response :success
+  end
+
   test 'should create favorite' do
     assert_difference('Favorite.count', 1) do
       post favorites_url(product_id: @megadrive.id)

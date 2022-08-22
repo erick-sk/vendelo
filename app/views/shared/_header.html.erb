@@ -6,5 +6,6 @@
   <%= link_to t('.login'), new_session_path, class: "underline mr-2" unless Current.user %>
   <%= link_to t('.register'), new_user_path, class: "underline mr-2" unless Current.user %>
   <%= link_to t('.logout'), session_path(Current.user.id), data: { turbo_method: :delete, turbo_confirm: t('common.confirm') }, class: "underline mr-2" if Current.user %>
+  <%= link_to t('.my_favorites'), favorites_path, class: "underline mr-2" %>
   <p><%= Current.user&.username %></p>
 </div>
